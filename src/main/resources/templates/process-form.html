@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html xml:th="http://www.thymeleaf.org">
+
+<head>
+    <title> Student Confirmation</title>
+
+    <link rel="stylesheet" th:href="@{/css/demo.css}"/>
+</head>
+
+<body>
+
+<br><br>
+     <span th:text="${student.firstName} + ' ' + ${student.lastName}" class="funny"/>  is now confirmed !
+<br><br>
+Age: <span th:text="${student.age}"/>
+
+<br><br>
+Pass code: <span th:text="${student.passCode}"/>
+
+<br><br>
+Country: <span th:text="${student.country}"/>
+
+<br><br>
+Postal code: <span th:text="${student.postalCode}"/>
+
+<br><br>
+The current degree: <span th:text="${student.latestDegree}"/>
+
+<br><br>
+The favorite subject: <span th:text="${student.subjects}"/>
+
+<ul>
+    <li th:each="tempSubject : ${student.subjects}" th:text="${tempSubject}"/>
+</ul>
+</body>
+</html>
